@@ -11,7 +11,7 @@ var numJewelsInStones = function(J, S) {
 var numJewelsInStones = (J, S) => S.split('').filter(elem => J.includes(elem)).length;
 // 혹은 [...S].filter((char) => J.indexOf(char) > -1 ).length // S.split('')랑 [...S]랑 같으므로
 
-//solution 3 어쨌든 for loop에다가 indexOf 돌리는 거라 내 거랑 비슷함
+//solution 3 어쨌든 for loop에다가 indexOf 돌리는 거라 내 거랑 time complexity 비슷함
 var numJewelsInStones = function(J, S) {
     let num = 0;
     for(var i=0; i<S.length; i++){
@@ -20,6 +20,19 @@ var numJewelsInStones = function(J, S) {
         }
     }
     return num;
+};
+
+//이것도 빠른 솔루션
+var numJewelsInStones = function(J, S) {
+    if (!J || !S) return 0;
+
+    let count = 0;
+    for (const c of S) {
+        console.log(c);
+        if (J.includes(c)) count++;
+    }
+
+    return count;
 };
 
 var res = numJewelsInStones('aAAA', 'aAAbbb');
