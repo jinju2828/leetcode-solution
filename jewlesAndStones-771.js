@@ -22,8 +22,6 @@ var numJewelsInStones = function(J, S) {
         }
     }
     return num;
-
-    return num;
 };
 
 var res = numJewelsInStones("aA","aAAbBBB");
