@@ -30,5 +30,5 @@ const longestCommonPrefix = (strings) => {
 }
 
 let res = longestCommonPrefix(["flower",'flow','flight']);
-// let res = longestCommonPrefix(["cc","cc"]);
+let res = longestCommonPrefix(["cc","cc","cc"]);
 console.log(res);

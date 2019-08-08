@@ -15,6 +15,6 @@ function longestCommonPrefix(strs) {
     return strs[0];
 }
 
-var res = longestCommonPrefix(["flo","flww","fldd"]);
-// var res = longestCommonPrefix([""]);
+// var res = longestCommonPrefix(["flo","flww","fldd"]);
+var res = longestCommonPrefix([""]);
 console.log(res);
