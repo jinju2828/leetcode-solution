@@ -30,5 +30,10 @@ var fizzBuzz = function(n) {
     return result;
 };
 
+//solution 3 with fill and map. Just 1 line!!
+var fizzBuzz = function(n) {
+    return new Array(n).fill(0).map((a, i) => (++i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz') || '' + i);
+};
+
 var res = fizzBuzz(15);
 console.log(res);
