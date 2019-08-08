@@ -1,3 +1,4 @@
+//solution 1
 var fizzBuzz = function(n) {
     var arr = [];
     for(var i=0; i<n; i++){
@@ -8,10 +9,25 @@ var fizzBuzz = function(n) {
         }else if((i+1) % 5 === 0){
             arr.push("Buzz");
         }else{
-            arr.push((i+1).toString());
+            arr.push(''+(i+1)+'');
         }
     }
     return arr;
+};
+
+//solution 2
+var fizzBuzz = function(n) {
+    var result = [],
+        str, i=1;
+    while( i <= n ){
+        str = "";
+        if( i%3===0 ) str = 'Fizz';
+        if( i%5===0 ) str += 'Buzz';
+        if(!str) str += i;
+        result.push( str );
+        i++;
+    }
+    return result;
 };
 
 var res = fizzBuzz(15);
