@@ -46,7 +46,7 @@ function numIslands(grid) {
 
     for (let r = 0; r < H; r++) {
         for (let c = 0; c < W; c++) {
-            if (grid[r][c] === '0') continue; // count 를 늘리지 않는다
+            if (grid[r][c] === '0') continue; // count 를 늘리지 않는다. 방문 했던 곳을 0으로 하면 DFS를 trigger하는 node로 간주되지 않으므로!
             count++;
             dfs(r, c);
         }
