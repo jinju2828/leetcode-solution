@@ -38,3 +38,31 @@
 // g.addEdge("B", "G");
 //
 // g.DFS("A");
+
+function numIslands(grid) {
+    const H = grid.length;
+    const W = H && grid[0].length;
+    let count = 0;
+
+    for (let r = 0; r < H; r++) {
+        for (let c = 0; c < W; c++) {
+            if (grid[r][c] === '0') continue; // count 를 늘리지 않는다
+            count++;
+            dfs(r, c);
+        }
+    }
+    return count;
+}
+
+    function dfs(r,c){
+        if (r<0 || c<0 || r===H || c===W) return; // grid 밖으로 넘어가면 terminate
+        if (grid[r][c] ==='0') return; // island 가다가 water 0을 마주치면 terminate
+
+        grid[r][c] = '0'; // mark as 0 when visited
+        dfs(r-1, c);
+        dfs(r+1, c);
+        dfs(r, c-1);
+        dfs(r, c+1);
+
+    }
+
