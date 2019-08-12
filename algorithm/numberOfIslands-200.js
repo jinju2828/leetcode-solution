@@ -52,8 +52,6 @@ function numIslands(grid) {
         }
     }
     return count;
-}
-
     function dfs(r,c){
         if (r<0 || c<0 || r===H || c===W) return; // grid 밖으로 넘어가면 terminate
         if (grid[r][c] ==='0') return; // island 가다가 water 0을 마주치면 terminate
@@ -65,4 +63,6 @@ function numIslands(grid) {
         dfs(r, c+1);
 
     }
+}
+
 
