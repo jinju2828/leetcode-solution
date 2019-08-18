@@ -39,6 +39,7 @@
 //
 // g.DFS("A");
 
+//DFS solution stack - LIFO 자식으로 계속 가다가 형제노드
 function numIslands(grid) {
     const H = grid.length;
     const W = H && grid[0].length;
