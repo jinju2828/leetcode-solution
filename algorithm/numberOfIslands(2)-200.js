@@ -1,4 +1,4 @@
-//BFS solution, queue - FIFO, 형제 노드부터 
+//BFS solution, queue - FIFO, 형제 노드부터
 
 var numIslands = function(grid) {
     if(!grid || grid.length == 0) return 0;
